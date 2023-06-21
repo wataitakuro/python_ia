@@ -28,5 +28,9 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
+        group = forms.ModelChoiceField(
+        queryset=GoodsGroup.objects.all(),  # 選択肢となるデータの一覧
+        label='グループ', required=False, empty_label='選択してください'
+    )
 
 # Create your models here.
